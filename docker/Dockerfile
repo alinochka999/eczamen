@@ -1,3 +1,3 @@
-FROM httpd:2.4.43-alpine
-COPY ./public-html/ /usr/local/apache2/htdocs/
-ENV PORT 80
+FROM nginx
+COPY html/ usr/share/nginx/html
+COPY nginx/default.conf /etc/nginx/conf.d/default.conf
